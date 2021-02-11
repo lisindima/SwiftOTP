@@ -32,14 +32,7 @@
 //  THE SOFTWARE.
 
 import Foundation
-
-#if canImport(Crypto)
-// Where available, use Swift Crypto
-// On Apple platforms, this will just re-expose CryptoKit's API
-import Crypto
-#else
 import CryptoKit
-#endif
 
 internal class Generator {
 

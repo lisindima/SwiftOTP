@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
@@ -9,11 +9,7 @@ let package = Package(
     products: [
         .library(name: "SwiftOTP", targets: ["SwiftOTP"]),
     ],
-    dependencies: [
-        .package(url: "https://github.com/apple/swift-crypto.git", .upToNextMajor(from: "1.0.0"))
-    ],
     targets: [
-        .target(name: "SwiftOTP", dependencies: ["Crypto"], path: "SwiftOTP/"),
-        .testTarget(name: "SwiftOTPTests", dependencies: ["SwiftOTP"])
+        .target(name: "SwiftOTP", dependencies: []),
     ]
 )
